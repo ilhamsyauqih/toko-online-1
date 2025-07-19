@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buku</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+        <div class="container">
+            <div class="d-flex ms-auto" class="button">
+                <a href="halaman_login/daftar.html">Daftar</a>
+                <a href="#">|</a>
+                <a href="halaman_login/masuk.html">Masuk</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar" style="top: 30px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.svg" alt="Logo" width="150" height="30" class="me-2"></a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search form -->
+                <form class="d-flex mx-auto my-2 my-lg-0"style="width: 390px;" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search">
+                    <button class="search-button" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Navigation links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list me-1"></i>Kategori
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="nonfiksi.html">Non-Fiksi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#products">Semua Produk</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- SLIDER ATAS SECTION -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 140px">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="images/Welcome to Our Class Google Classroom Header (2).png" class="d-block w-100 h-100 carousel-img" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/Welcome to Our Class Google Classroom Header (2).png" class="d-block w-100 h-100 carousel-img" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/Welcome to Our Class Google Classroom Header (2).png" class="d-block w-100 h-100 carousel-img" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- KATEGORI -->
+<section id="kategori" class="py-5">
+  <div class="container">
+  <h2 class="text-left mb-4">Cari Buku Kategori Apa?</h2>
+  <div class="row" id="rowKategori">
+    <div class="col-md-6 mb-4">
+      <a href="fiksi.html" class="text-decoration-none">
+        <div class="card h-100" style="cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="images/Kategori/buku_fiksi.png" class="card-img-top" alt="Kategori-Buku Fiksi">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #0B706E;">Buku Fiksi</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-6 mb-4">
+      <a href="nonfiksi.html" class="text-decoration-none">
+        <div class="card h-100" style="cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="images/Kategori/buku_nonfiksi.png" class="card-img-top" alt="Kategori-Buku Nonfiksi">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #0B706E;">Buku Nonfiksi</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+  </section>
+
+<!-- PRODUK SECTION -->
+<section id="products" class="py-5">
+<div class="container" style="margin-top: 50px;">
+<h2 class="text-center mb-4">Daftar Produk</h2>
+<div class="row" id="">
+<div class="col-md-3 mb-4">
+<div class="card h-100" style="cursor: pointer;" onclick="window.location.href='produk1.html'">
+<img src="images/produk/produk1.jpg" class="card-img-top" alt="Seporsi Mie Ayam Sebelum Mati (Brian Khrisna)">
+<div class="card-body d-flex flex-column">
+<span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+<h5 class="card-title">Seporsi Mie Ayam Sebelum Mati (Brian Khrisna)</h5>
+<p class="card-text">Rp25.000</p>
+<button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk1')">
+<i class="bi bi-cart3 me-1"></i>Tambah</button>
+</div>
+</div>
+</div>
+<div class="col-md-3 mb-4">
+<div class="card h-100" style="cursor: pointer;" onclick="window.location.href='produk2.html'">
+<img src="images/produk/produk2.jpeg" class="card-img-top" alt="Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa (James Clear)">
+<div class="card-body d-flex flex-column">
+<span class="badge bg-success mb-2" style="width: 40%;">Non-Fiksi</span>
+<h5 class="card-title">Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa (James Clear)</h5>
+<p class="card-text">Rp50.000</p>
+<button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk2')"><i class="bi bi-cart3 me-1"></i>Tambah</button>
+</div>
+</div>
+</div>
+<div class="col-md-3 mb-4">
+<div class="card h-100" style="cursor: pointer;" onclick="window.location.href='produk3.html'">
+<img src="images/produk/produk3.jpeg" class="card-img-top" alt="Laut Bercerita (Leila S. Chudori)">
+<div class="card-body d-flex flex-column">
+<span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+<h5 class="card-title">Laut Bercerita (Leila S. Chudori)</h5>
+<p class="card-text">Rp20.000</p>
+<button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk3')"><i class="bi bi-cart3 me-1"></i>Tambah</button>
+</div>
+</div>
+</div>
+<div class="col-md-3 mb-4">
+<div class="card h-100" style="cursor: pointer;" onclick="window.location.href='produk4.html'">
+<img src="images/produk/produk4.jpg" class="card-img-top" alt="The Psychology of Money Edisi Revisi (Morgan Housel)">
+<div class="card-body d-flex flex-column">
+<span class="badge bg-success mb-2" style="width: 40%;">Non-Fiksi</span>
+<h5 class="card-title">The Psychology of Money Edisi Revisi (Morgan Housel)</h5>
+<p class="card-text">Rp30.000</p>
+<button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk4')"><i class="bi bi-cart3 me-1"></i>Tambah</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER SECTION -->
+ <footer class="bg-dark text-white text-center py-4 mt-5">
+<div class="container">
+<p class="mb-1">&copy; 2025 Foodie Store. All rights reserved.</p>
+<small>Ikuti kami di:
+<a href="#" class="text-white text-decoration-underline">
+<i class="bi bi-instagram"></i> Instagram</a>,
+<a href="#" class="text-white text-decoration-underline">
+<i class="bi bi-facebook"></i> Facebook</a>, dan
+<a href="#" class="text-white text-decoration-underline">
+<i class="bi bi-twitter"></i> Twitter</a>
+</small>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
