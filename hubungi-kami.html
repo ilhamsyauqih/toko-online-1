@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Toko Buku Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #0B706E 0%, #085a58 100%);
+            color: white;
+            padding: 80px 0 60px;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0B706E 0%, #085a58 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .form-control:focus {
+            border-color: #0B706E;
+            box-shadow: 0 0 0 0.2rem rgba(11, 112, 110, 0.25);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #0B706E 0%, #085a58 100%);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(11, 112, 110, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html" style="color: #0B706E; font-size: 1.5rem;">
+                <i class="bi bi-book me-2"></i>Toko Buku Online
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fiksi.html">Buku Fiksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nonfiksi.html">Buku Non-Fiksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="hubungi-kami.html">Hubungi Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge bg-danger rounded-pill ms-1" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="halaman_login/masuk.html">
+                            <i class="bi bi-person-circle"></i> Masuk
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Hubungi Kami</h1>
+                    <p class="lead mb-4">Kami siap membantu Anda! Jangan ragu untuk menghubungi kami jika ada pertanyaan atau butuh bantuan dalam memilih buku favorit Anda.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-chat-dots" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <!-- Contact Cards -->
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Alamat</h5>
+                        <p class="text-muted">Jl. Pendidikan No. 123<br>Bandung, Jawa Barat<br>Indonesia</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Telepon</h5>
+                        <p class="text-muted">
+                            <a href="tel:+6281234567890" class="text-decoration-none text-muted">+62 812-3456-7890</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Email</h5>
+                        <p class="text-muted">
+                            <a href="mailto:info@tokobuku.com" class="text-decoration-none text-muted">info@tokobuku.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Jam Buka</h5>
+                        <p class="text-muted">Senin - Jumat<br>09:00 - 21:00 WIB</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps and Contact Form -->
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798464064249!2d107.61870731477!3d-6.914744995010001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sJl.%20Pendidikan%2C%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1642678901234!5m2!1sen!2sid" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <h4 class="fw-bold mb-4">Kirim Pesan</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Nomor Telepon</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subjek</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Pesan</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="bi bi-send me-2"></i>Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="contact-card text-center">
+                        <h4 class="fw-bold mb-4">Ikuti Kami di Media Sosial</h4>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="btn btn-outline-primary rounded-circle p-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-facebook fs-4"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary rounded-circle p-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-instagram fs-4"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary rounded-circle p-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-twitter fs-4"></i>
+                            </a>
+                            <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-outline-success rounded-circle p-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-whatsapp fs-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="py-5" style="background: linear-gradient(135deg, #0B706E 0%, #085a58 100%); color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-3" style="font-weight: 600;">Toko Buku Online</h5>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.6;">Menyediakan berbagai koleksi buku berkualitas dengan harga terjangkau. Temukan buku favorit Anda di sini!</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="text-white me-3" style="font-size: 1.5rem; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='white'">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" style="font-size: 1.5rem; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='white'">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" style="font-size: 1.5rem; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='white'">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://wa.me/6281234567890" class="text-white" style="font-size: 1.5rem; transition: all 0.3s ease;" target="_blank" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='white'">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="text-white mb-3" style="font-weight: 600;">Menu</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Beranda</a></li>
+                        <li class="mb-2"><a href="fiksi.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Buku Fiksi</a></li>
+                        <li class="mb-2"><a href="nonfiksi.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Buku Non-Fiksi</a></li>
+                        <li class="mb-2"><a href="hubungi-kami.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white mb-3" style="font-weight: 600;">Layanan</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Cara Pemesanan</a></li>
+                        <li class="mb-2"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Metode Pembayaran</a></li>
+                        <li class="mb-2"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Pengiriman</a></li>
+                        <li class="mb-2"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Kebijakan Return</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="text-white mb-3" style="font-weight: 600;">Kontak Kami</h6>
+                    <ul class="list-unstyled" style="color: rgba(255,255,255,0.8);">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2" style="color: #ffc107;"></i>Jl. Pendidikan No. 123, Bandung</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2" style="color: #ffc107;"></i><a href="tel:+6281234567890" style="color: rgba(255,255,255,0.8); text-decoration: none;">+62 812-3456-7890</a></li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2" style="color: #ffc107;"></i><a href="mailto:info@tokobuku.com" style="color: rgba(255,255,255,0.8); text-decoration: none;">info@tokobuku.com</a></li>
+                        <li class="mb-2"><i class="bi bi-clock me-2" style="color: #ffc107;"></i>Sen-Jum: 09:00-21:00</li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 2rem 0;">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white" style="font-weight: 500;">&copy; 2025 Toko Buku Online. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small>
+                        <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" class="me-3" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Syarat & Ketentuan</a>
+                        <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Kebijakan Privasi</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
