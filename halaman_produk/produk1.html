@@ -6,52 +6,70 @@
     <title>Seporsi Mie Ayam Sebelum Mati - Foodie Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/style.css" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-book-fill me-2"></i>Foodie Store
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <div class="d-flex ms-auto" class="button">
+                <a href="halaman_login/daftar.html">Daftar</a>
+                <a href="#">|</a>
+                <a href="halaman_login/masuk.html">Masuk</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar" style="top: 30px;">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../assets/logo.svg" alt="Logo" width="150" height="30" class="me-2"></a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search form -->
+                <form class="d-flex mx-auto my-2 my-lg-0"style="width: 390px;" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search">
+                    <button class="search-button" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Navigation links -->
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fiksi.html">Fiksi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nonfiksi.html">Non-Fiksi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="toggleCart()">
-                            <i class="bi bi-cart3"></i> Keranjang (<span id="cart-count">0</span>)
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list me-1"></i>Kategori
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="nonfiksi.html">Non-Fiksi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#products">Semua Produk</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- PRODUCT DETAIL SECTION -->
     <section class="py-5" style="margin-top: 80px;">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html">Beranda</a></li>
                     <li class="breadcrumb-item active">Detail Produk</li>
                 </ol>
             </nav>
             
             <div class="row">
                 <div class="col-md-6">
-                    <img src="images/produk/produk1.jpg" class="img-fluid rounded shadow" alt="Seporsi Mie Ayam Sebelum Mati">
+                    <img src="../images/produk/produk1.jpg" class="img-fluid rounded shadow" alt="Seporsi Mie Ayam Sebelum Mati">
                 </div>
                 <div class="col-md-6">
                     <h1 class="mb-3">Seporsi Mie Ayam Sebelum Mati</h1>
