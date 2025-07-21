@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk - Toko Buku Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+        <div class="container">
+            <div class="d-flex ms-auto" class="button">
+                <a href="daftar.html">Daftar</a>
+                <a href="#">|</a>
+                <a href="masuk.html">Masuk</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar" style="top: 30px;">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../assets/logo.svg" alt="Logo" width="150" height="30" class="me-2"></a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search form -->
+                <form class="d-flex mx-auto my-2 my-lg-0" style="width: 390px;" role="search" onsubmit="performSearch(event)">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search" id="searchInput" oninput="handleRealTimeSearch()">
+                    <button class="search-button" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Navigation links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list me-1"></i>Kategori
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="../nonfiksi.html">Non-Fiksi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../index.html#products">Semua Produk</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#kontak"><i class="bi bi-telephone me-1"></i>Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- LOGIN SECTION -->
+    <section class="py-5" style="margin-top: 140px; min-height: 80vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <i class="bi bi-person-circle" style="font-size: 4rem; color: #0B706E;"></i>
+                                <h2 class="mt-3" style="color: #0B706E; font-weight: 600;">Masuk</h2>
+                                <p class="text-muted">Masuk ke akun Anda untuk melanjutkan</p>
+                            </div>
+                            
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="loginEmail" placeholder="Masukkan email Anda" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="loginPassword" placeholder="Masukkan password Anda" required>
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                            <i class="bi bi-eye" id="toggleIcon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Ingat saya
+                                    </label>
+                                </div>
+                                
+                                <div class="d-grid mb-3">
+                                    <button type="submit" class="btn btn-lg" style="background-color: #0B706E; color: white; border-color: #0B706E;">
+                                        <i class="bi bi-box-arrow-in-right me-2"></i>Masuk
+                                    </button>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <a href="#" class="text-decoration-none" style="color: #0B706E;">Lupa password?</a>
+                                </div>
+                            </form>
+                            
+                            <hr class="my-4">
+                            
+                            <div class="text-center">
+                                <p class="mb-0">Belum punya akun? <a href="daftar.html" class="text-decoration-none" style="color: #0B706E; font-weight: 500;">Daftar sekarang</a></p>
+                            </div>
+                            
+                            <!-- Social Login Options -->
+                            <div class="mt-4">
+                                <p class="text-center text-muted mb-3">Atau masuk dengan</p>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-danger w-100">
+                                            <i class="bi bi-google me-2"></i>Google
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-primary w-100">
+                                            <i class="bi bi-facebook me-2"></i>Facebook
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="py-5" style="background: linear-gradient(135deg, #0B706E 0%, #085a58 100%); color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-3" style="font-weight: 600;">Toko Buku Online</h5>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.6;">Menyediakan berbagai koleksi buku berkualitas dengan harga terjangkau. Temukan buku favorit Anda di sini!</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="text-white mb-3" style="font-weight: 600;">Menu</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Beranda</a></li>
+                        <li class="mb-2"><a href="../fiksi.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Buku Fiksi</a></li>
+                        <li class="mb-2"><a href="../nonfiksi.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Buku Non-Fiksi</a></li>
+                        <li class="mb-2"><a href="../index.html#products" style="color: rgba(255,255,255,0.8); text-decoration: none;">Semua Produk</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white mb-3" style="font-weight: 600;">Kontak Kami</h6>
+                    <ul class="list-unstyled" style="color: rgba(255,255,255,0.8);">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2" style="color: #ffc107;"></i>Jl. Pendidikan No. 123, Bandung</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2" style="color: #ffc107;"></i>+62 812-3456-7890</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2" style="color: #ffc107;"></i>info@tokobuku.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 2rem 0;">
+            <div class="text-center">
+                <p class="mb-0 text-white" style="font-weight: 500;">&copy; 2025 Toko Buku Online. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/script.js"></script>
+    <script>
+        // Login form functionality
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const rememberMe = document.getElementById('rememberMe').checked;
+            
+            // Basic validation
+            if (!email || !password) {
+                showNotification('Harap lengkapi semua field!', 'warning');
+                return;
+            }
+            
+            // Simulate login process
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Masuk...';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                // Store login state
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                if (rememberMe) {
+                    localStorage.setItem('rememberLogin', 'true');
+                }
+                
+                showNotification('Login berhasil! Selamat datang kembali.', 'success');
+                
+                // Redirect to homepage after 1.5 seconds
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1500);
+            }, 2000);
+        });
+        
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('loginPassword');
+            const toggleIcon = document.getElementById('toggleIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.className = 'bi bi-eye-slash';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.className = 'bi bi-eye';
+            }
+        });
+        
+        // Check if user is already logged in
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            showNotification('Anda sudah login. Mengalihkan ke beranda...', 'success');
+            setTimeout(() => {
+                window.location.href = '../index.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

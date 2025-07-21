@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Non-Fiksi - Toko Buku</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+        <div class="container">
+            <div class="d-flex ms-auto" class="button">
+                <a href="halaman_login/daftar.html">Daftar</a>
+                <a href="#">|</a>
+                <a href="halaman_login/masuk.html">Masuk</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar" style="top: 30px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.svg" alt="Logo" width="150" height="30" class="me-2"></a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search form -->
+                <form class="d-flex mx-auto my-2 my-lg-0"style="width: 390px;" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search">
+                    <button class="search-button" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Navigation links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list me-1"></i>Kategori
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="nonfiksi.html">Non-Fiksi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html#products">Semua Produk</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="container" style="margin-top: 140px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Buku Non-Fiksi</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- NON-FIKSI PRODUCTS SECTION -->
+    <section id="nonfiksi-products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Koleksi Buku Non-Fiksi</h2>
+            <div class="row">
+                <!-- Produk 2 - Atomic Habits -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk2.html'">
+                        <img src="images/produk/produk2.jpeg" class="card-img-top" alt="Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa (James Clear)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-success mb-2" style="width: 40%;">Non-Fiksi</span>
+                            <h5 class="card-title">Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa (James Clear)</h5>
+                            <p class="card-text">Rp50.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk2')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 4 - The Psychology of Money -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk4.html'">
+                        <img src="images/produk/produk4.jpg" class="card-img-top" alt="The Psychology of Money Edisi Revisi (Morgan Housel)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-success mb-2" style="width: 40%;">Non-Fiksi</span>
+                            <h5 class="card-title">The Psychology of Money Edisi Revisi (Morgan Housel)</h5>
+                            <p class="card-text">Rp85.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk4')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 6 - Sejarah Dunia Yang Disembunyikan -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk6.html'">
+                        <img src="images/produk/produk6.jpg" class="card-img-top" alt="Sejarah Dunia Yang Disembunyikan (Jonathan Black)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-success mb-2" style="width: 40%;">Non-Fiksi</span>
+                            <h5 class="card-title">Sejarah Dunia Yang Disembunyikan (Jonathan Black)</h5>
+                            <p class="card-text">Rp165.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk6')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 15 - Kamu Tak Harus Sempurna -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk15.html'">
+                        <img src="images/produk/produk15.jpg" class="card-img-top" alt="Kamu Tak Harus Sempurna">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-success mb-2" style="width: 40%;">Non-Fiksi</span>
+                            <h5 class="card-title">Kamu Tak Harus Sempurna</h5>
+                            <p class="card-text">Rp38.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk15')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 16 - Berani Tidak Disukai -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk16.html'">
+                        <img src="images/produk/produk16.jpg" class="card-img-top" alt="Berani Tidak Disukai (Ichiro Kishimi Dan Fumitake Koga, Ichiro Kishimi dan Fumitake Koga)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-success mb-2" style="width: 40%;">Non-Fiksi</span>
+                            <h5 class="card-title">Berani Tidak Disukai</h5>
+                            <p class="card-text">Rp88.200</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk16')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Foodie Store. All rights reserved.</p>
+            <small>Ikuti kami di:
+                <a href="#" class="text-white text-decoration-underline">
+                    <i class="bi bi-instagram"></i> Instagram</a>,
+                <a href="#" class="text-white text-decoration-underline">
+                    <i class="bi bi-facebook"></i> Facebook</a>, dan
+                <a href="#" class="text-white text-decoration-underline">
+                    <i class="bi bi-twitter"></i> Twitter</a>
+            </small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>

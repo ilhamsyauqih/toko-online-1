@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laut Bercerita - Foodie Store</title>
+    <title>Laut Bercerita - Toko Buku</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="../assets/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- NAVBAR -->
-   <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
     <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
         <div class="container">
             <div class="d-flex ms-auto" class="button">
-                <a href="halaman_login/daftar.html">Daftar</a>
+                <a href="../halaman_login/daftar.html">Daftar</a>
                 <a href="#">|</a>
-                <a href="halaman_login/masuk.html">Masuk</a>
+                <a href="../halaman_login/masuk.html">Masuk</a>
             </div>
         </div>
     </nav>
@@ -42,17 +41,17 @@
                             <i class="bi bi-list me-1"></i>Kategori
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="fiksi.html">Fiksi</a></li>
-                            <li><a class="dropdown-item" href="nonfiksi.html">Non-Fiksi</a></li>
+                            <li><a class="dropdown-item" href="../fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="../nonfiksi.html">Non-Fiksi</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#products">Semua Produk</a></li>
+                            <li><a class="dropdown-item" href="../index.html#products">Semua Produk</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                        <a class="nav-link" href="../index.html#products"><i class="bi bi-shop me-1"></i>Produk</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
+                        <a class="nav-link" href="../cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
                     </li>
                 </ul>
             </div>
@@ -63,7 +62,7 @@
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html">Beranda</a></li>
                     <li class="breadcrumb-item active">Detail Produk</li>
                 </ol>
             </nav>
@@ -78,12 +77,12 @@
                     <p class="text-muted mb-3">Kategori: Fiksi</p>
                     
                     <div class="mb-4">
-                        <h3 class="text-warning">Rp20.000</h3>
+                        <h3 style="color: #0B706E;">Rp130.000</h3>
                     </div>
                     
                     <div class="mb-4">
                         <h5>Deskripsi Produk</h5>
-                        <p>Novel yang mengisahkan tentang keluarga yang terpisah akibat tragedi politik tahun 1998. Cerita yang menyentuh tentang perjuangan, kehilangan, dan harapan yang ditulis dengan indah oleh Leila S. Chudori. Novel ini meraih berbagai penghargaan sastra dan menjadi salah satu karya terbaik sastra Indonesia kontemporer.</p>
+                        <p>Novel yang mengisahkan tentang keluarga yang terpisah akibat tragedi 1965. Melalui narasi yang kuat dan emosional, Leila S. Chudori menghadirkan cerita tentang cinta, kehilangan, dan perjuangan untuk bertahan hidup di tengah situasi politik yang bergolak. Sebuah karya sastra yang mendalam dan menyentuh hati.</p>
                         
                         <h6>Spesifikasi:</h6>
                         <ul>
@@ -91,12 +90,12 @@
                             <li>Tahun Terbit: 2017</li>
                             <li>Jumlah Halaman: 394 halaman</li>
                             <li>Bahasa: Indonesia</li>
-                            <li>ISBN: 978-602-481-234-5</li>
+                            <li>ISBN: 978-602-424-518-9</li>
                         </ul>
                     </div>
                     
                     <div class="d-grid gap-2">
-                        <button class="btn btn-warning btn-lg" onclick="addToCart('produk3')">
+                        <button class="btn btn-lg" style="background-color: #0B706E; color: white; border-color: #0B706E;" onclick="addToCart('produk3')">
                             <i class="bi bi-cart3 me-2"></i>Tambah ke Keranjang
                         </button>
                         <button class="btn btn-outline-secondary" onclick="history.back()">
@@ -124,6 +123,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/script.js"></script>
+    <script src="../assets/script.js"></script>
 </body>
 </html>

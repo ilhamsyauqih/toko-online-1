@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Fiksi - Toko Buku</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+        <div class="container">
+            <div class="d-flex ms-auto" class="button">
+                <a href="halaman_login/daftar.html">Daftar</a>
+                <a href="#">|</a>
+                <a href="halaman_login/masuk.html">Masuk</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar" style="top: 30px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.svg" alt="Logo" width="150" height="30" class="me-2"></a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search form -->
+                <form class="d-flex mx-auto my-2 my-lg-0"style="width: 390px;" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search">
+                    <button class="search-button" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Navigation links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list me-1"></i>Kategori
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="nonfiksi.html">Non-Fiksi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html#products">Semua Produk</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="container" style="margin-top: 140px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Buku Fiksi</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- FIKSI PRODUCTS SECTION -->
+    <section id="fiksi-products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Koleksi Buku Fiksi</h2>
+            <div class="row">
+                <!-- Produk 1 - Seporsi Mie Ayam Sebelum Mati -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk1.html'">
+                        <img src="images/produk/produk1.jpg" class="card-img-top" alt="Seporsi Mie Ayam Sebelum Mati (Brian Khrisna)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Seporsi Mie Ayam Sebelum Mati (Brian Khrisna)</h5>
+                            <p class="card-text">Rp83.700</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk1')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 3 - Laut Bercerita -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk3.html'">
+                        <img src="images/produk/produk3.jpeg" class="card-img-top" alt="Laut Bercerita (Leila S. Chudori)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Laut Bercerita (Leila S. Chudori)</h5>
+                            <p class="card-text">Rp130.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk3')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 5 - Filosofi Teras -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk5.html'">
+                        <img src="images/produk/produk5.jpg" class="card-img-top" alt="Filosofi Teras (New Cover) (Henry Manampiring)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Filosofi Teras (New Cover) (Henry Manampiring)</h5>
+                            <p class="card-text">Rp108.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk5')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 7 - Bicara Itu Ada Seninya -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk7.html'">
+                        <img src="images/produk/produk7.jpg" class="card-img-top" alt="Bicara Itu Ada Seninya - Soft Cover (Oh Su Hyang)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Bicara Itu Ada Seninya - Soft Cover (Oh Su Hyang)</h5>
+                            <p class="card-text">Rp63.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk7')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 8 - Sisi Tergelap Surga -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk8.html'">
+                        <img src="images/produk/produk8.jpg" class="card-img-top" alt="Sisi Tergelap Surga (Brian Khrisna)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Sisi Tergelap Surga (Brian Khrisna)</h5>
+                            <p class="card-text">Rp89.000</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk8')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 9 - Sebuah Seni untuk Bersikap Bodo Amat -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk9.html'">
+                        <img src="images/produk/produk9.jpg" class="card-img-top" alt="Sebuah Seni untuk Bersikap Bodo Amat (edisi handy)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Sebuah Seni untuk Bersikap Bodo Amat (edisi handy)</h5>
+                            <p class="card-text">Rp70.200</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk9')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 10 - Novel Dompet Ayah Sepatu Ibu -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk10.html'">
+                        <img src="images/produk/produk10.jpg" class="card-img-top" alt="Novel Dompet Ayah Sepatu Ibu (J.S. Khairen)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Novel Dompet Ayah Sepatu Ibu (J.S. Khairen)</h5>
+                            <p class="card-text">Rp79.200</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk10')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 11 - Ayah, Ini Arahnya ke Mana, ya? -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk11.html'">
+                        <img src="images/produk/produk11.jpg" class="card-img-top" alt="Ayah, Ini Arahnya ke Mana, ya? (Khoirul Trian)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Ayah, Ini Arahnya ke Mana, ya? (Khoirul Trian)</h5>
+                            <p class="card-text">Rp71.100</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk11')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 12 - Kado Terbaik -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk12.html'">
+                        <img src="images/produk/produk12.jpg" class="card-img-top" alt="Kado Terbaik ( J.S. Khairen)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Kado Terbaik ( J.S. Khairen)</h5>
+                            <p class="card-text">Rp75.650</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk12')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 14 - Funiculi Funicula -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk14.html'">
+                        <img src="images/produk/produk14.jpg" class="card-img-top" alt="Funiculi Funicula: Kisah-Kisah yang Baru Terungkap (Toshikazu Kawaguchi)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Funiculi Funicula: Kisah-Kisah yang Baru Terungkap (Toshikazu Kawaguchi)</h5>
+                            <p class="card-text">Rp71.100</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk14')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk 17 - Teka-Teki Rumah Aneh -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100" style="cursor: pointer;" onclick="window.location.href='halaman_produk/produk17.html'">
+                        <img src="images/produk/produk17.jpg" class="card-img-top" alt="Teka-Teki Rumah Aneh (Uketsu)">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2" style="width: 40%;">Fiksi</span>
+                            <h5 class="card-title">Teka-Teki Rumah Aneh</h5>
+                            <p class="card-text">Rp71.100</p>
+                            <button class="btn btn-warning w-100 mt-auto" onclick="event.stopPropagation(); addToCart('produk17')">
+                                <i class="bi bi-cart3 me-1"></i>Tambah</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Foodie Store. All rights reserved.</p>
+            <small>Ikuti kami di:
+                <a href="#" class="text-white text-decoration-underline">
+                    <i class="bi bi-instagram"></i> Instagram</a>,
+                <a href="#" class="text-white text-decoration-underline">
+                    <i class="bi bi-facebook"></i> Facebook</a>, dan
+                <a href="#" class="text-white text-decoration-underline">
+                    <i class="bi bi-twitter"></i> Twitter</a>
+            </small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
