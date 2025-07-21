@@ -9,7 +9,7 @@
     <link href="../assets/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+       <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
     <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
         <div class="container">
             <div class="d-flex ms-auto" class="button">
@@ -30,8 +30,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Search form -->
-                <form class="d-flex mx-auto my-2 my-lg-0"style="width: 390px;" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search">
+                <form class="d-flex mx-auto my-2 my-lg-0" style="width: 390px;" role="search" onsubmit="performSearch(event)">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search" id="searchInput" oninput="handleRealTimeSearch()">
                     <button class="search-button" type="submit"><i class="bi bi-search"></i></button>
                 </form>
                 <!-- Navigation links -->
@@ -41,17 +41,20 @@
                             <i class="bi bi-list me-1"></i>Kategori
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../fiksi.html">Fiksi</a></li>
-                            <li><a class="dropdown-item" href="../nonfiksi.html">Non-Fiksi</a></li>
+                            <li><a class="dropdown-item" href="../halaman_kategori/fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="../halaman_kategori/nonfiksi.html">Non-Fiksi</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="../index.html#products">Semua Produk</a></li>
+                            <li><a class="dropdown-item" href="#products">Semua Produk</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                        <a class="nav-link" href="#products"><i class="bi bi-shop me-1"></i>Produk</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
+                        <a class="nav-link" href="../hubungi-kami.html"><i class="bi bi-telephone me-1"></i>Hubungi Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
                     </li>
                 </ul>
             </div>

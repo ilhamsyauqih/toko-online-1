@@ -61,63 +61,60 @@
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <!-- TOP NAVBAR FOR LOGIN/SIGNUP -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html" style="color: #0B706E; font-size: 1.5rem;">
-                <i class="bi bi-book me-2"></i>Toko Buku Online
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <div class="d-flex ms-auto" class="button">
+                <a href="halaman_login/daftar.html">Daftar</a>
+                <a href="#">|</a>
+                <a href="halaman_login/masuk.html">Masuk</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar" style="top: 30px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.svg" alt="Logo" width="150" height="30" class="me-2"></a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search form -->
+                <form class="d-flex mx-auto my-2 my-lg-0" style="width: 390px;" role="search" onsubmit="performSearch(event)">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." aria-label="Search" id="searchInput" oninput="handleRealTimeSearch()">
+                    <button class="search-button" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Navigation links -->
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fiksi.html">Buku Fiksi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nonfiksi.html">Buku Non-Fiksi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="hubungi-kami.html">Hubungi Kami</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html">
-                            <i class="bi bi-cart3"></i>
-                            <span class="badge bg-danger rounded-pill ms-1" id="cart-count">0</span>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list me-1"></i>Kategori
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fiksi.html">Fiksi</a></li>
+                            <li><a class="dropdown-item" href="nonfiksi.html">Non-Fiksi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html#products">Semua Produk</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="halaman_login/masuk.html">
-                            <i class="bi bi-person-circle"></i> Masuk
-                        </a>
+                        <a class="nav-link" href="index.html#products"><i class="bi bi-shop me-1"></i>Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hubungi-kami.html"><i class="bi bi-telephone me-1"></i>Hubungi Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Keranjang</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- HERO SECTION -->
-    <section class="contact-hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-3">Hubungi Kami</h1>
-                    <p class="lead mb-4">Kami siap membantu Anda! Jangan ragu untuk menghubungi kami jika ada pertanyaan atau butuh bantuan dalam memilih buku favorit Anda.</p>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <i class="bi bi-chat-dots" style="font-size: 8rem; opacity: 0.3;"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CONTACT SECTION -->
     <section class="py-5" style="background-color: #f8f9fa;">
-        <div class="container">
+        <div class="container" style="margin-top: 90px;">
             <!-- Contact Cards -->
             <div class="row mb-5">
                 <div class="col-lg-3 col-md-6 mb-4">
